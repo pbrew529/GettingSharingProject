@@ -1,4 +1,4 @@
-# Getting and Sharing Data Project Course Project
+# Getting and Cleaning Data Project Course Project
 
 ## Overview
 This project contains a script that process the UCI Har data set and produces a tidy data set.
