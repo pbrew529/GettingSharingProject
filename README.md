@@ -1,8 +1,11 @@
 # Getting and Sharing Data Project Course Project
 
 ## Overview
-This project contains a script that process the UCI Har data set and produces a tidy data set
-The included code book describes the contents of the tidy data set 
+This project contains a script that process the UCI Har data set and produces a tidy data set.
+The included code book describes the contents of the tidy data set - the code book can be found here
+
+https://github.com/pbrew529/GettingSharingProject/blob/master/Code%20Book.txt
+
 
 ##Prerequisites to run the script
 ###R version and package dependecies
@@ -15,13 +18,15 @@ install.packages("data.table")
 install.packages("reshape2")
 
 ### Data
-The script uses data obtained from this link:
+The script uses data obtained from this link
+
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-You should first download that data and unzip it into your R working directory - you should end up with a folder called "UCI Har Dataset" in your working directory
+You should first download that data and unzip it into your R working directory - you will end up with a folder called "UCI Har Dataset" in your working directory
 
 	
 The folder structure will also contain a set of files as described in this link
+
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
 If you do not download and unzip the data set as described, the script will identify that the "UCI HAR Dataset" folder is missing and will download and unzip the files for you.
@@ -38,10 +43,10 @@ If you do not download and unzip the data set as described, the script will iden
 
 #### For part One of the assignment (Merge test and training data to one set)
 * Loads the data.table library (This allows for faster reading and processing of the data)
-* uses fread to read the test and train raw data sets
-* uses fread to load the subject and activity data for each observation
-* uses cbind to append subject and activity data to the test and train sets
-* uses rbind to combine the test and training data sets
+* Uses fread to read the test and train raw data sets
+* Uses fread to load the subject and activity data for each observation
+* Uses cbind to append subject and activity data to the test and train sets
+* Uses rbind to combine the test and training data sets
 
 #### For part two of the assignment 
 Extracts only the measurements on the mean and standard deviation for each measurement
@@ -52,8 +57,8 @@ Extracts only the measurements on the mean and standard deviation for each measu
 
 #### For part Three of the assignment 
 Uses descriptive activity names to name the activities in the data set
-* reads the activity descriptive names from activity_labels.txt
-* uses merge to append those lables to th eoriginal data set joining on thee activity id field from each set
+* Reads the activity descriptive names from activity_labels.txt
+* Uses merge to append those lables to th eoriginal data set joining on thee activity id field from each set
 * Subsets the data again removing the activity id fields from the merge command
 
 #### For part four of the assignment 
