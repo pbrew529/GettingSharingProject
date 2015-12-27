@@ -1,0 +1,118 @@
+Code Book Coursera Getting and Cleaning Data Course Project
+This document describes a tidy dataset produced by cleaning and summarizing data download from UCI’s “Human Activity Recognition Using Smartphones Data Set”. The original data set contains a series of measurements of 30 different subjects performing any one of six different activities while wearing a cell phone.  Details of the original data set can be found at this link:
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+In addition to sampled movement data, the original data set contains means and standard deviation of different types of movements across the X, Y and Z axes. The tidy data set submitted with this document contains averages of the original mean and standard deviation, grouped by subject then activity.
+The original data set describes measurements of acceleration and velocity that were normalized between the values of -1 and 1.
+The tidy data set contains values for 81 different variables out of the original 561. These variables are organized in a wide data set with 4 columns and 180 rows (30 Subjects x 6 activities). Each row has 81 variables as described below.
+Data Dictionary
+IDs:
+Activity
+- Descriptive name of each of the activities (Factor six different values)
+- WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+Subject ID
+- Factor with 30 different values representing each of the different unique subjects
+- 1,2,3, . . . 30
+Measurements - averages of values for each possible combination of the above IDs for means and standard deviations in the original data set. All measurements are numeric with values between -1 and 1:
+
+Average Timer Body Acceleration Mean measured across three axes
+- X-Axis. Y-Axis and Z-Axis       
+                                             
+Average Timer Body Acceleration Standard Deviation 
+- X-Axis. Y-Axis and Z-Axis       
+                                    
+Average Timer Gravity Acceleration Mean 
+- X-Axis. Y-Axis and Z-Axis       
+                                      
+Average Timer Gravity Acceleration Standard Deviation 
+- X-Axis. Y-Axis and Z-Axis       
+
+Average Timer Body Acceleration Jerk-Signal Mean 
+- X-Axis. Y-Axis and Z-Axis       
+                                     
+Average Timer Body Acceleration Jerk-Signal Standard Deviation 
+- X-Axis. Y-Axis and Z-Axis       
+                      
+Average Timer Body Gyroscope Mean 
+- X-Axis. Y-Axis and Z-Axis       
+                                                 
+Average Timer Body Gyroscope Standard Deviation 
+- X-Axis. Y-Axis and Z-Axis       
+                                       
+Average Timer Body Gyroscope Jerk-Signal Mean 
+- X-Axis. Y-Axis and Z-Axis       
+                                      
+Average Timer Body Gyroscope Jerk-Signal Standard Deviation 
+- X-Axis. Y-Axis and Z-Axis       
+                    
+Average Timer Body Acceleration Magnitude Mean    
+                                             
+Average Timer Body Acceleration Magnitude Standard Deviation          
+                         
+Average Timer Gravity Acceleration Magnitude Mean    
+                                           
+Average Timer Gravity Acceleration Magnitude Standard Deviation       
+                         
+Average Timer Body Acceleration Jerk-Signal Magnitude Mean   
+                                  
+Average Timer Body Acceleration Jerk-Signal Magnitude Standard Deviation     
+                  
+Average Timer Body Gyroscope Magnitude Mean    
+                                                
+Average Timer Body Gyroscope Magnitude Standard Deviation           
+                           
+Average Timer Body Gyroscope Jerk-Signal Magnitude Mean   
+                                     
+Average Timer Body Gyroscope Jerk-Signal Magnitude Standard Deviation     
+                     
+Average Fast Fourier Transform Body Acceleration Mean 
+- X-Axis. Y-Axis and Z-Axis       
+                                 
+Average Fast Fourier Transform Body Acceleration Standard Deviation 
+- X-Axis. Y-Axis and Z-Axis       
+                 
+Average Fast Fourier Transform Body Acceleration Mean-Frequency 
+- X-Axis. Y-Axis and Z-Axis       
+                     
+Average Fast Fourier Transform Body Acceleration Jerk-Signal Mean 
+- X-Axis. Y-Axis and Z-Axis       
+                     
+Average Fast Fourier Transform Body Acceleration Jerk-Signal Standard Deviation 
+- X-Axis. Y-Axis and Z-Axis       
+     
+Average Fast Fourier Transform Body Acceleration Jerk-Signal Mean-Frequency 
+- X-Axis. Y-Axis and Z-Axis       
+        
+Average Fast Fourier Transform Body Gyroscope Mean 
+- X-Axis. Y-Axis and Z-Axis       
+                                
+Average Fast Fourier Transform Body Gyroscope Standard Deviation 
+- X-Axis. Y-Axis and Z-Axis       
+                     
+Average Fast Fourier Transform Body Gyroscope Mean-Frequency
+- X-Axis. Y-Axis and Z-Axis       
+  
+                     
+Fast Fourier Transform Body Acceleration Magnitude Mean               
+                 
+Fast Fourier Transform Body Acceleration Magnitude Standard Deviation      
+            
+Fast Fourier Transform Body Acceleration Magnitude Mean-Frequency      
+                
+Fast Fourier Transform Body Body-Acceleration Jerk-Signal Magnitude Mean       
+        
+Fast Fourier Transform Body Body-Acceleration Jerk-Signal Magnitude Standard Deviation 
+
+Fast Fourier Transform Body Body-Acceleration Jerk-Signal Magnitude Mean-Frequency     
+
+Fast Fourier Transform Body Body-Gyroscope Magnitude Mean      
+                        
+Fast Fourier Transform Body Body-Gyroscope Magnitude Standard Deviation    
+    
+Fast Fourier Transform Body Body-Gyroscope Magnitude Mean-Frequency     
+               
+Fast Fourier Transform Body Body-Gyroscope Jerk-Signal Magnitude Mean   
+    
+Fast Fourier Transform Body Body-Gyroscope Jerk-Signal Magnitude Standard Deviation  
+  
+Fast Fourier Transform Body Body-Gyroscope Jerk-Signal Magnitude Mean-Frequency      
+
