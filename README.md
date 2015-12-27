@@ -19,12 +19,12 @@ The script uses data obtained from this link:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 You should first download that data and unzip it into your R working directory - this should create a folder structure like this:
-./ 
-  UCI HAR Dataset
-	test
-		internal signals
-	train
-		internal signals
+*./ 
+**UCI HAR Dataset
+***test
+****internal signals
+***train
+****internal signals
 	
 The folder structure will also contain a set of files as described in this link
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
