@@ -25,7 +25,7 @@ runAnalysis <- function(){
 
 
 #1.) Merge training and test sets into one data set
-#Data tables faster read and merge 
+        #Data table library faster read, merge and dcast  
         library(data.table)
         
         testfile <- "UCI HAR Dataset/test/X_test.txt" 
@@ -36,7 +36,7 @@ runAnalysis <- function(){
         colnames(testactivities) <- "activityID"
         
         # Data set containing test data using cbind
-        #First Column is subject ID second column is activity ID
+        # First Column is subject ID second column is activity ID
         testdata <- cbind(testsubjects, testactivities, testdata)
         
         trainfile <- "UCI HAR Dataset/train/X_train.txt" 
@@ -47,7 +47,7 @@ runAnalysis <- function(){
         colnames(trainactivities) <- "activityID"
         
         # Data set containing training data using cbind
-        #First Column is subject ID second column is activity ID
+        # First Column is subject ID second column is activity ID
         traindata <- cbind(trainsubjects, trainactivities, traindata)
         
         #Row bind into one large set
@@ -56,7 +56,7 @@ runAnalysis <- function(){
 
 
 #2.) extract the mean and stdDev for each measurement
-# This part just extracts the columns for means and stddev
+        # This part extracts the columns for means and stddev
 
         headerfile <- "UCI HAR Dataset/features.txt"
         headerdata <- fread(headerfile,sep = "auto" , header = F , nrows = 561 ,na.strings ="", stringsAsFactors= F)
@@ -81,15 +81,15 @@ runAnalysis <- function(){
 
 #4.) Label the data set with descriptive variable names
 
-# Append Subject Id and Activity labels
+        # Append Subject Id and Activity labels
         headernames <- c("Subject","Activity",headerdata[colstouse]$V2)
 
-# Items prefixed with t are time
-# Items prefixed with f are Fast Fourier Transforms of signals
-# Acc = Acceleration
-# Mag = magnitude
-# X Y and Z are Axes
-# Clean up names
+        # Items prefixed with t are time
+        # Items prefixed with f are Fast Fourier Transforms of signals
+        # Acc = Acceleration
+        # Mag = magnitude
+        # X Y and Z are Axes
+        # Clean up names
         headernames <- sub("tBody", "Timer Body ", headernames)
         headernames <- sub("tGravity", "Timer Gravity ", headernames)
         headernames <- sub("fBody", "Fast Fourier Transform Body ", headernames)
@@ -129,7 +129,7 @@ runAnalysis <- function(){
         # At this point finaldata is already tidy  - in wide format
         write.table(finaldata,file = "TidyAverages.txt", row.name = F)
         
-# Retun Final Data
+        # Retun Final Data
         finaldata
 
 
